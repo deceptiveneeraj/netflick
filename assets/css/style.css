@@ -1,0 +1,484 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Georgia, 'Times New Roman', Times, serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #121212;
+    background-color: #141414;
+    color: #ffffff;
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+.slider {
+    width: 100vw;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: 5s ease-out;
+    background-repeat: no-repeat;
+}
+.slider::before {
+    content: '';
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(20, 20, 20, 0.8) 70%, #141414 100%);
+}
+
+header nav {
+    width: 100%;
+}
+
+header nav ul {
+    max-width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    padding: 1.5% 10% 1px;
+}
+
+header nav ul li:first-child {
+    margin-right: auto;
+    font-weight: bold;
+}
+
+header nav ul li .logo img {
+    height: 3.5rem;
+}
+
+header nav ul li a {
+    height: 100%;
+    text-decoration: none;
+}
+
+header nav ul li:hover {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+nav ul li select {
+    background-color: rgba(0, 0, 0, 0);
+    color: #9c7474;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-shadow: 2px 1px 2px rgb(0, 0, 0);
+
+}
+
+nav ul li button {
+    background-color: #e50914;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hero-content {
+    width: 90%;
+    position: absolute;
+    bottom: 13%;
+    left: 5%;
+}
+
+.hero-content h1 {
+    width: 100%;
+    font-size: 2.20rem;
+    font-weight: bold;
+    color: rgb(185, 180, 180);
+    text-shadow: 3px 2px 5px rgba(255, 0, 0, 0.933);
+    
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.more-info {
+    margin-top: -3%;
+    float: right;
+    background-color: rgb(14, 42, 66);
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.0rem;
+}
+
+/* Telegram notice Start  */
+.telegram-notice {
+    background: linear-gradient(135deg, #0088cc 0%, #179cde 100%);
+    border-radius: 16px;
+    padding: 5px 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 20px;
+    color: white;
+    margin-top: -4.5%;
+    max-width: 90%;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 136, 204, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 10px 30px rgba(0, 136, 204, 0.3); }
+    50% { box-shadow: 0 10px 40px rgba(0, 136, 204, 0.5); }
+}
+
+.telegram-icon {
+    flex-shrink: 0;
+    background: white;
+    border-radius: 50%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.telegram-content {
+    flex: 1;
+}
+
+.telegram-title {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.telegram-text {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.telegram-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    color: #0088cc;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+.telegram-button:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-2px);
+}
+/* Telegram notice End  */
+
+.otts-slider {
+    margin-top: 5px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.otts-track {
+    display: flex;
+    gap: 25px;
+    width: max-content;
+    animation: scroll-left-right 25s linear infinite;
+}
+
+.otts-track img {
+    height: 100px;
+    opacity: 0.9;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.otts-track img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* animation */
+@keyframes scroll-left-right {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Cards Start */
+.cards-container {
+    max-width: 100%;
+    margin-top: 2%;
+}
+
+.cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+.cards-slider {
+    position: relative;
+}
+
+.slider-btn{
+    display: none;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background-color: rgba(125, 101, 101, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 1.7rem;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.cards-slider:hover .slider-btn{
+    display: block;
+}
+.cards-container .prev-btn {
+    left: 20px;
+}
+.cards-container .next-btn {
+    right: 10px;
+}
+
+.cards-container h2 {
+    display: inline;
+    margin-left: 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(185, 180, 180);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.cards-container .show-all-btn {
+    margin-right: 5%;
+    float: right;
+    color: #ffffff;
+    background-color: #e50914;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.top10 {
+    display: flex;
+    margin-top: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.previous-btn, .forward-btn {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.card {
+    height: 320px;
+    min-width: 200px;
+    margin-left: 1%;
+    background-color: #161515;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 16px rgba(204, 7, 7, 0.566);
+}
+
+.rank {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    text-shadow: #e50914;
+    z-index: 1;
+}
+
+.card-image {
+    width: 98%;
+    height: 78%;
+}
+
+.card-image img {
+    width: 100%;
+    height: 98%;
+    object-fit: cover;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.card-image img:hover {
+    transform: scale(1.1);
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 5px 10px 0 10px;
+}
+
+.card-genre,
+.card-year {
+    font-size: 0.8rem;
+    margin: 3px 10px 0 10px;
+}
+
+/* Cards End */
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul li .logo img {
+        height: 2.2rem;
+    }
+
+    nav ul li select {
+        height: 20px;
+        width: 60px;
+        padding: 5px;
+        font-size: 6px;
+        margin-right: -10px;
+    }
+
+    nav ul li button {
+        height: 20px;
+        width: 35px;
+        padding: 5px;
+        font-size: 6px;
+        margin-right: -25px;
+    }
+
+    .slider {
+        height: 30vh;
+    }
+    .slider-btn{
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 0.70rem;
+    }
+
+    .hero-content p {
+        font-size: 0.35rem;
+    }
+
+    .hero-content button {
+        font-size: 0.4rem;
+    }
+
+    .otts-slider {
+        margin-top: -31%;
+    }
+
+    .otts-track img {
+        height: 40px;
+    }
+
+    .otts-track {
+        margin-top: 26%;
+    }
+
+    /* Top 10 Movies And TV Shows */
+    .cards-container {
+        margin-top: 2%;
+    }
+
+    .cards-container h2 {
+        margin-left: 15px;
+        font-size: 0.6rem;
+    }
+
+    .card {
+        height: 220px;
+        min-width: 120px;
+    }
+
+    .rank {
+        top: 5px;
+        left: 5px;
+        font-size: 1.5rem;
+    }
+
+    .card-image {
+        height: 70%;
+    }
+
+    .card-title {
+        font-size: 0.6rem;
+    }
+
+    .card-genre,
+    .card-year {
+        font-size: 0.4rem;
+        padding: 2px;
+    }
+    .cards-container .show-all-btn{
+        margin-top: 1%;
+        font-size: 0.5rem;
+    }
+
+    .otts-slider {
+        margin-top: -26%;
+    }
+
+    .telegram-title {
+        font-size: 0.6rem;
+    }
+
+    .telegram-text {
+        font-size: 0.4rem;
+    }
+}

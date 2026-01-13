@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflick - Movies & TV Shows</title>
+
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+
+    <!-- For iPhone/iPad -->
+    <link rel="apple-touch-icon" href="./assets/img/favicon.png">
+
+    <!-- For Android & Progressive Web Apps -->
+    <link rel="manifest" href="./manifest.json">
+
+    <!-- Optional: Shortcut icon fallback -->
+    <link rel="shortcut icon" href="./assets/img/favicon.png">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header class="slider">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/" class="logo"><img src="./assets/img/logo.png" alt="Netflick"></a></li>
+                <li><select id="select" name="show">
+                        <option value="Movies">Movies</option>
+                        <option value="TV Shows">TV Shows</option>
+                        <option value="My List">My List</option>
+                    </select></li>
+                <li><button type="button">Sign In</button></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1 id="showName">Welcome to Netflick, your one-stop destination for the latest movies and TV shows.</h1>
+            <p id="desc">
+                <!-- Welcome to Netflick,your one-stop destination for the latest movies and TV shows.
+                Here, you can explore a wide collection of entertainment.
+                Enjoy seamless browsing, and easy access to downloads.
+                All content is available in Hindi, making entertainment more accessible and enjoyable for everyone. -->
+            </p>
+            <p id="genre"></p>
+            <p id="year"></p>
+            <div class="more-info-container"></div>
+        </div>
+    </header>
+    <div class="telegram-notice">
+        <div class="telegram-icon">
+            <svg width="25" height="25" viewBox="0 0 24 24" fill="#0088cc">
+                <path
+                    d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.054 5.56-5.022c.242-.213-.054-.333-.373-.121l-6.869 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.196 1.006.128.832.941z" />
+            </svg>
+        </div>
+        <div class="telegram-content">
+            <h3 class="telegram-title">🔑 Telegram Required</h3>
+            <p class="telegram-text">You <strong>must have a Telegram account</strong> to access our content
+                library. Download the app and join our channel for instant access!</p>
+            <!-- <a href="https://telegram.org" target="_blank" class="telegram-button">
+                        Get Telegram
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path
+                                d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.054 5.56-5.022c.242-.213-.054-.333-.373-.121l-6.869 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.196 1.006.128.832.941z" />
+                        </svg>
+                    </a> -->
+        </div>
+    </div>
+    <div class="otts-slider">
+        <div class="otts-track">
+            <img src="assets/img/otts/netflix.png" alt="Netflix">
+            <img src="assets/img/otts/disney.png" alt="Disney+">
+            <img src="assets/img/otts/prime.png" alt="Prime Video">
+            <img src="assets/img/otts/marvel.png" alt="Marvel Studios">
+            <img src="assets/img/otts/hulu.png" alt="Hulu">
+            <img src="assets/img/otts/peacock.png" alt="Peacock">
+            <img src="assets/img/otts/paramount.png" alt="Paramount+">
+            <img src="assets/img/otts/appletv.png" alt="Apple TV">
+            <img src="assets/img/otts/hbomax.png" alt="HBO Max">
+            <img src="assets/img/otts/dc.png" alt="DC Comics">
+            <img src="assets/img/otts/jiohotstar.png" alt="Jio Hotstar">
+
+            <!-- duplicate images for smooth loop -->
+            <img src="assets/img/otts/netflix.png" alt="Netflix">
+            <img src="assets/img/otts/disney.png" alt="Disney+">
+            <img src="assets/img/otts/prime.png" alt="Prime Video">
+            <img src="assets/img/otts/marvel.png" alt="Marvel Studios">
+        </div>
+    </div>
+    <main>
+        <section class="cards-container">
+            <h2 class="heading"></h2>
+
+            <div class="cards-slider">
+                <!-- Previous Button -->
+                <button class="slider-btn prev-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor" />
+                    </svg>
+                </button>
+
+                <!-- Cards Container -->
+                <div class="top10" id="top10">
+                    <!-- Cards will be dynamically inserted here -->
+                </div>
+
+                <!-- Next Button -->
+                <button class="slider-btn next-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="assets/js/script.js"></script>
+</body>
+
+</html>

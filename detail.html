@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflick - Movies & TV Shows</title>
+
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+
+    <!-- For iPhone/iPad -->
+    <link rel="apple-touch-icon" href="./assets/img/favicon.png">
+
+    <!-- For Android & Progressive Web Apps -->
+    <link rel="manifest" href="./manifest.json">
+
+    <!-- Optional: Shortcut icon fallback -->
+    <link rel="shortcut icon" href="./assets/img/favicon.png">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/detail.css">
+</head>
+
+<body>
+    <header class="detailImage" id="detailImage">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="logo"><img src="./assets/img/logo.png" alt="Netflick"></a></li>
+                <li><select id="select" name="shows">
+                        <option value="Movies">Movies</option>
+                        <option value="TV Shows">TV Shows</option>
+                        <option value="My List">My List</option>
+                    </select></li>
+                <li><button type="button">Sign In</button></li>
+            </ul>
+            <!-- <div class="detailImage" id="detailImage"></div> -->
+        </nav>
+    </header>
+    <main class="detail-main">
+        <div class="detail-content">
+            <h1 id="detailShowName"></h1>
+
+            <div class="detail-meta">
+                <span class="match"></span>
+                <span class="year" id="detailYear"></span>
+                <span class="type"></span>
+                <span class="genre" id="detailGenre"></span>
+            </div>
+
+            <p class="detail-desc" id="detailDesc"></p>
+
+            <p class="detail-desc actors" id="cast"></p>
+
+            <div class="action-buttons">
+                <a href="#seasonsSection">
+                    <button class="btn-play">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                        </svg>
+                        Download
+                    </button>
+                </a>
+                <button class="telegram-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <path
+                                d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.054 5.56-5.022c.242-.213-.054-.333-.373-.121l-6.869 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.196 1.006.128.832.941z" />
+                        </svg>
+                        Telegram Required
+                    </button>
+                <!-- <button class="btn-list">+ My List</button> -->
+                 
+            </div>
+        </div>
+        
+
+        <!-- Seasons & Episodes Section (for TV Shows only) -->
+        <div class="seasons-section" id="seasonsSection">
+            <div class="season-selector">
+                <h2>Episodes</h2>
+                <select id="seasonSelect">
+                    <!-- <option value="1">Season 1</option>
+                    <option value="2">Season 2</option>
+                    <option value="3">Season 3</option> -->
+                </select>
+                <span id="resolution">Quality</span>
+            </div>
+
+            <div class="episodes-list" id="episodesList">
+                <!-- Episodes will be dynamically loaded here -->
+            </div>
+        </div>
+    </main>
+    
+    <script type="module" src="assets/js/detail.js"></script>
+</body>
+
+</html>

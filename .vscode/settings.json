@@ -1,0 +1,5 @@
+{
+    "files.autoSave": "onFocusChange",
+    "livePreview.customExternalBrowser": "Edge",
+    "liveServer.settings.port": 5501
+}
