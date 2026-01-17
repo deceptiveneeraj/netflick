@@ -408,11 +408,11 @@ nav ul li button {
     }
 
     .hero-content h1 {
-        font-size: 0.70rem;
+        font-size: 0.7rem;
     }
 
     .hero-content p {
-        font-size: 0.35rem;
+        font-size: 0.45rem;
     }
 
     .hero-content button {
@@ -457,12 +457,12 @@ nav ul li button {
     }
 
     .card-title {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
     }
 
     .card-genre,
     .card-year {
-        font-size: 0.4rem;
+        font-size: 0.6rem;
         padding: 2px;
     }
     .cards-container .show-all-btn{
